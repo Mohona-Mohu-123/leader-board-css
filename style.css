@@ -99,6 +99,7 @@ hr {
 .course{
     width: 252px;
     padding: 8px;
+    border-radius: 5px;
     box-shadow: 10px 10px 40px #f0e9e9;
 }
 .banner-img {
@@ -129,4 +130,43 @@ hr {
     border-radius: 14px;
     padding:0 5px;
     color: #ED6B4F;
+}
+
+/* responsive */
+
+/* mobile devices */
+@media screen and (max-width:688px) {
+    .container{
+        width: 100%;
+    }
+    .players, .blogs, .courses{
+        grid-template-columns: repeat(1, 1fr);
+        
+    }
+    .player, .blog{
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .course{
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+}
+@media screen and (min-width:688px) and (max-width:992px) {
+    .container{
+        width: 100%;
+    }
+   .players, .courses{
+    grid-template-columns: repeat(2, 1fr);
+   }
+   
+   .player, .blog, .course{
+    /* justify-content: center; */
+    align-items: center;
+   }
+   .course{
+        margin-bottom: 24px;
+   }
 }
